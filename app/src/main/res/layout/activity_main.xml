@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#333333"> <!-- Cor de fundo padrão -->
+
+        <!-- Título ChurrasPar -->
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ChurrasPar"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Entradas de dados para número de homens, mulheres e crianças -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextHomens"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Homens"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/editTextMulheres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Mulheres"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
+
+            <EditText
+                android:id="@+id/editTextCriancas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Crianças"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:background="@android:color/white"/>
+        </LinearLayout>
+
+        <!-- Botão de calcular -->
+        <Button
+            android:id="@+id/buttonCalcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Resultado para comida -->
+        <TextView
+            android:id="@+id/textViewResultadoComida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comida"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Seção de comida (Carne e Aperitivos) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textViewCarne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="900g Carne"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewExtraCarne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="90g Extra"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:background="@android:color/holo_green_light">
+
+                <TextView
+                    android:id="@+id/textViewAperitivos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300g Aperitivos"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/textViewExtraAperitivos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30g Extra"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textViewTotalComida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1290g TOTAL"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Resultado para bebidas -->
+        <TextView
+            android:id="@+id/textViewResultadoBebida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bebida"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Seção de bebidas (Cerveja, Água, Refrigerante) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textViewCerveja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6L Cerveja"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewExtraCerveja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="600ml Extra"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textViewAgua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4L Água"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textViewExtraAgua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="400ml Extra"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:background="@android:color/holo_blue_dark">
+
+                <TextView
+                    android:id="@+id/textViewRefrigerante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3L Refrigerante"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/textViewExtraRefrigerante"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300ml Extra"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/textViewParticipantes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Participantes"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Total de bebidas -->
+        <TextView
+            android:id="@+id/textViewTotalBebida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14,3 Litros TOTAL"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@android:color/holo_blue_bright"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonLimpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:padding="16dp"
+            android:text="Limpar"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
