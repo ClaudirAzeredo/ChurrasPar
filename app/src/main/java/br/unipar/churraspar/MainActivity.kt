@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Inicializando as Views
         editTextHomens = findViewById(R.id.editTextHomens)
         editTextMulheres = findViewById(R.id.editTextMulheres)
         editTextCriancas = findViewById(R.id.editTextCriancas)
@@ -40,14 +39,12 @@ class MainActivity : AppCompatActivity() {
         buttonCalcular = findViewById(R.id.buttonCalcular)
         buttonLimpar = findViewById(R.id.buttonLimpar)
 
-        // Configurando ação do botão "Calcular"
         buttonCalcular.setOnClickListener {
             if (validarEntradas()) {
                 calcularChurrasco()
             }
         }
 
-        // Configurando ação do botão "Limpar"
         buttonLimpar.setOnClickListener {
             limparCampos()
         }
@@ -66,7 +63,6 @@ class MainActivity : AppCompatActivity() {
         val numMulheres = editTextMulheres.text.toString().toIntOrNull() ?: 0
         val numCriancas = editTextCriancas.text.toString().toIntOrNull() ?: 0
 
-        // Calcular e atualizar as quantidades
         val totalCarne = calcularCarne(numHomens, numMulheres, numCriancas)
         val totalAperitivos = calcularAperitivos(numHomens, numMulheres, numCriancas)
         val totalBebidaAlcoolica = calcularBebidaAlcoolica(numHomens, numMulheres)
@@ -118,12 +114,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun limparCampos() {
-        // Limpando os EditTexts
+
         editTextHomens.text.clear()
         editTextMulheres.text.clear()
         editTextCriancas.text.clear()
 
-        // Resetando os TextViews
         textViewCarne.text = "0g"
         textViewAperitivos.text = "0g"
         textViewCerveja.text = "0L"

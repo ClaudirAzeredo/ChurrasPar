@@ -11,9 +11,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="#333333"> <!-- Cor de fundo padrão -->
+        android:background="#333333">
 
-        <!-- Título ChurrasPar -->
         <TextView
             android:id="@+id/textViewTitulo"
             android:layout_width="wrap_content"
@@ -25,7 +24,6 @@
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Entradas de dados para número de homens, mulheres e crianças -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +60,6 @@
                 android:background="@android:color/white"/>
         </LinearLayout>
 
-        <!-- Botão de calcular -->
         <Button
             android:id="@+id/buttonCalcular"
             android:layout_width="wrap_content"
@@ -74,7 +71,6 @@
             android:textColor="@android:color/white"
             android:layout_marginTop="16dp"/>
 
-        <!-- Resultado para comida -->
         <TextView
             android:id="@+id/textViewResultadoComida"
             android:layout_width="wrap_content"
@@ -84,7 +80,6 @@
             android:textColor="@android:color/white"
             android:layout_marginTop="16dp"/>
 
-        <!-- Seção de comida (Carne e Aperitivos) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,7 +98,7 @@
                     android:id="@+id/textViewCarne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="900g Carne"
+                    android:text="g Carne"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -111,7 +106,7 @@
                     android:id="@+id/textViewExtraCarne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="90g Extra"
+                    android:text="g Extra"
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -128,7 +123,7 @@
                     android:id="@+id/textViewAperitivos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="300g Aperitivos"
+                    android:text="g Aperitivos"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"/>
 
@@ -136,7 +131,7 @@
                     android:id="@+id/textViewExtraAperitivos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="30g Extra"
+                    android:text="g Extra"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"/>
             </LinearLayout>
@@ -153,13 +148,12 @@
                     android:id="@+id/textViewTotalComida"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1290g TOTAL"
+                    android:text="g TOTAL"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Resultado para bebidas -->
         <TextView
             android:id="@+id/textViewResultadoBebida"
             android:layout_width="wrap_content"
@@ -169,7 +163,6 @@
             android:textColor="@android:color/white"
             android:layout_marginTop="16dp"/>
 
-        <!-- Seção de bebidas (Cerveja, Água, Refrigerante) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -188,7 +181,7 @@
                     android:id="@+id/textViewCerveja"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6L Cerveja"
+                    android:text="L Cerveja"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -196,7 +189,7 @@
                     android:id="@+id/textViewExtraCerveja"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="600ml Extra"
+                    android:text="ml Extra"
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -213,7 +206,7 @@
                     android:id="@+id/textViewAgua"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4L Água"
+                    android:text="L Água"
                     android:textColor="@android:color/black"
                     android:textSize="16sp" />
 
@@ -221,7 +214,7 @@
                     android:id="@+id/textViewExtraAgua"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="400ml Extra"
+                    android:text="ml Extra"
                     android:textColor="@android:color/black"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -238,7 +231,7 @@
                     android:id="@+id/textViewRefrigerante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3L Refrigerante"
+                    android:text="L Refrigerante"
                     android:textColor="@android:color/white"
                     android:textSize="16sp"/>
 
@@ -246,7 +239,7 @@
                     android:id="@+id/textViewExtraRefrigerante"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="300ml Extra"
+                    android:text="ml Extra"
                     android:textColor="@android:color/white"
                     android:textSize="12sp"/>
 
@@ -260,12 +253,11 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Total de bebidas -->
         <TextView
             android:id="@+id/textViewTotalBebida"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="14,3 Litros TOTAL"
+            android:text="Litros TOTAL"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:gravity="center"
